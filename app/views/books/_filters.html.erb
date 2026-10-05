@@ -1,0 +1,19 @@
+<%= form_for_filterrific @filterrific do |f| %>
+  <div>
+    <%= f.label :search_by_name, "Book name" %>
+    <%= f.text_field :search_by_name %>
+  </div>
+
+  <div>
+    <%= f.label :with_release_date, "Release date" %>
+    <%= f.date_field :with_release_date %>
+  </div>
+
+  <div>
+    <%= f.label :search_by_author_name, "Author name" %>
+    <%= f.text_field :search_by_author_name %>
+  </div>
+
+  <%= f.submit "Filter" %>
+  <%= link_to "Clear", books_path %>
+<% end %>
